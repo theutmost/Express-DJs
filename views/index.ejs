@@ -1,0 +1,40 @@
+<% include ./partials/header %>
+
+    <!--made a loop thru data indexes to not have to write data for each DJ... the whole pt of a template, duh!-->
+
+
+    <div class="profileBox">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <% if (data[i]) { %>
+            <div class="profSingle">
+                <h1 class="profile-title">
+                    <%= data[i].djName %>
+                </h1>
+                <a href="/profile/<%= i %>"> <img class="profileImages" src=<%= data[i].image %> ></a>
+            </div>
+            <% } %> 
+            <% } %>
+    </div>
+
+
+
+    <div>
+        <form action="/" method="post" class="ui form">
+            <input type="text" name="searchInput" id="findyour" placeholder="Search for a DJ">
+            <button class="ui button" id="btmbutton1" type="submit">Submit</button>
+
+        </form>
+    </div>
+
+
+    <div>
+
+        <a href="/djform"><button class="ui button" id="btmbutton2" >Add Your favorite DJ to our roster</button> </a>
+    </div>
+
+    <!--<div>
+<%= data[1].id %> 
+    </div>-->
+
+
+    <% include ./partials/footer %>

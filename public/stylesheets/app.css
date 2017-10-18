@@ -1,0 +1,87 @@
+html{
+    /*font-family: 'Abril Fatface', cursive;*/
+    letter-spacing: 2px;
+}
+
+body{
+    margin: 6px;
+    font-family: 'Abril Fatface', cursive;
+        background-color: #FFFFFF;
+
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+li a:hover {
+ color: indigo;
+}
+
+body .prismlogo{
+    height: 45px;
+    margin-bottom: 5%;
+
+}
+
+body .worldsbest{
+    float: right;
+    padding-right: 10px;
+    font-size: 25px;
+     color: indigo;
+     margin-bottom: 10px;
+
+}
+
+
+.profilepage{
+   padding-left: 24px;
+    color: indigo;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 16px;
+}
+.profile-title{
+    padding-left: 24px;
+    color: pink;
+    margin-bottom: 0px;
+     margin-top: 40%;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 16px;
+}
+
+.profSingle {
+    display: table-cell;
+    padding-right: 50px;
+    padding-left: 0;
+    padding-bottom: 50px;
+    font-size: 11px;
+    }
+
+.profileImages {
+    height: 44%;
+}
+
+#findyour{
+    width: 160px;
+    margin-left: 24px;
+    margin-right: 0;
+     margin-bottom: 20px;
+}
+
+#btmbutton1{
+    width: 135px;
+    margin-left: 0;
+         
+}
+
+#btmbutton2{
+    width: 300px;
+    margin-left: 24px;
+         
+}
+
+
+
+/*.profileBox {
+}*/

@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+
+    <div>
+        <form action="/profile/<%= id%>/edit" method="POST" class="submitButton">
+            <input type="text"  name="djName" value="<%=profile.djName%>">DJ Name<br>
+            <input type="text"  name="addName" value="<%=profile.name%>">Real Name<br>
+            <input type="text" name="addWebsite" value="<%=profile.website%>">Add Website<br>
+            <input type="text" name="addImage" value="<%=profile.image%>">Add Photo URL
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>

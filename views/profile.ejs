@@ -1,0 +1,51 @@
+<% include ./partials/header %>
+
+    <form method="post" action="/profile/<%=id%>">
+
+        <div class="profilepage">
+            <h1 class="profilepage">
+                <%= profile.djName %>
+            </h1>
+            <li>Real Name:
+                <%= profile.name %>
+            </li>
+            <li>Website:
+                <a href="<%= profile.website %>">
+                    <%= profile.website %>
+                </a>
+            </li>
+            <img src=<%= profile.image %> <br>
+        </div>
+
+        <div>
+            <% if (!profile.alwaysThere) { %>
+                <a href="/profile/<%=id%>/edit"><button type="button">Update</button></a>
+                <button type="button" id="<%= id %>" onclick="sendDeleteRequest(this)">Delete</button>
+                <% } %>
+        </div>
+
+    </form>
+
+    <script>
+        function sendDeleteRequest(deleteButton) {
+            console.log(deleteButton)
+            var id = deleteButton.getAttribute("id")
+            console.log(id);
+            var request = new Request("/profile/" + id, {
+                method: "DELETE"
+            });
+
+fetch(request)
+    .then(response => {
+        return response.json();
+    })
+    .then(body => {
+        console.log(body)
+        alert(body.message);
+        window.location.href = "/";
+    })
+    .catch (error => console.log(error));
+        }
+    </script>
+
+    <p> <a href="/"> HOME PAGE</a> </p>
